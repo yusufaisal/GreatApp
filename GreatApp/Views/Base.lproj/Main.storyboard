@@ -7,11 +7,11 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="DancingScript-Regular.ttf">
+            <string>DancingScript-Regular</string>
+        </array>
         <array key="DancingScript-SemiBold.ttf">
             <string>DancingScript-SemiBold</string>
-        </array>
-        <array key="DancingScript-VariableFont_wght.ttf">
-            <string>DancingScript-Regular</string>
         </array>
     </customFonts>
     <scenes>
@@ -89,10 +89,22 @@
                                     <constraint firstAttribute="trailing" secondItem="kM6-w1-v8V" secondAttribute="trailing" constant="8" id="rrq-Kf-Sfx"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FCF-Tg-ce4">
+                                <rect key="frame" x="315" y="69" width="32" height="31.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="BdM-yV-MK9"/>
+                                    <constraint firstAttribute="width" constant="32" id="lxQ-2O-uvi"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="bell" catalog="system"/>
+                                <connections>
+                                    <segue destination="bc9-ka-93M" kind="show" id="4LJ-hU-eBw"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="I5c-yh-gcd" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="7zv-6c-5mM"/>
+                            <constraint firstItem="Tgy-vz-bJ2" firstAttribute="leading" secondItem="FCF-Tg-ce4" secondAttribute="trailing" constant="10" id="Cnq-st-TkB"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Tgy-vz-bJ2" secondAttribute="trailing" constant="25" id="OQZ-mb-zwp"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hHb-qT-RBb" secondAttribute="trailing" constant="20" id="PXa-44-Z7c"/>
                             <constraint firstItem="I5c-yh-gcd" firstAttribute="top" secondItem="gU7-Sf-7TI" secondAttribute="bottom" constant="20" id="UAA-D7-3vd"/>
@@ -100,6 +112,7 @@
                             <constraint firstItem="gU7-Sf-7TI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="c4j-Mx-1dT"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="I5c-yh-gcd" secondAttribute="trailing" constant="20" id="cTR-MI-xjR"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="hHb-qT-RBb" secondAttribute="bottom" constant="20" id="e0i-tc-mTB"/>
+                            <constraint firstItem="FCF-Tg-ce4" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="25" id="eDd-uv-OR3"/>
                             <constraint firstItem="Tgy-vz-bJ2" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="25" id="fjD-Hd-ZNt"/>
                             <constraint firstItem="hHb-qT-RBb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="gf2-ug-YbI"/>
                             <constraint firstItem="I5c-yh-gcd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lhd-cu-Iyj"/>
@@ -226,9 +239,58 @@
             </objects>
             <point key="canvasLocation" x="969.56521739130437" y="130.58035714285714"/>
         </scene>
+        <!--Notification Center-->
+        <scene sceneID="5WE-RF-4jW">
+            <objects>
+                <tableViewController id="aYS-1O-1Vc" customClass="NotificationViewController" customModule="GreatApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="vjz-yo-fMb">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Flz-Ar-QEP">
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Flz-Ar-QEP" id="AxB-yq-J75">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="aYS-1O-1Vc" id="bAk-ye-cXG"/>
+                            <outlet property="delegate" destination="aYS-1O-1Vc" id="4zT-N9-cpv"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Notification Center" id="14R-S7-2Ie"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fAM-m7-KeA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1879.7101449275365" y="853.79464285714278"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="O0o-aY-Gon">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="bc9-ka-93M" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="vxn-Ve-Q2p"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="0cd-Gd-QVu">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="aYS-1O-1Vc" kind="relationship" relationship="rootViewController" id="E4l-9o-bEf"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="R68-tr-Qi0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="969.56521739130437" y="853.79464285714278"/>
+        </scene>
     </scenes>
     <color key="tintColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
     <resources>
+        <image name="bell" catalog="system" width="128" height="124"/>
         <image name="envelope.fill" catalog="system" width="128" height="93"/>
         <image name="person.circle" catalog="system" width="128" height="121"/>
         <image name="xmark.circle" catalog="system" width="128" height="121"/>
