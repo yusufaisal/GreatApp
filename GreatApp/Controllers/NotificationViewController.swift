@@ -47,13 +47,16 @@ class NotificationViewController: UITableViewController {
         let cell = UITableViewCell(style: .subtitle, reuseIdentifier: nil)
         
         cell.accessoryType = .disclosureIndicator
-        cell.imageView?.image = UIImage.init(systemName: notificationData[row].icon ?? "")
-        cell.textLabel?.text = notificationData[row].title ?? ""
-        cell.detailTextLabel?.text = notificationData[row].message ?? ""
+        cell.imageView?.image = UIImage.init(systemName: notificationData[row].icon)
+        cell.textLabel?.text = notificationData[row].title
+        cell.detailTextLabel?.text = notificationData[row].message
 
         return cell
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.performSegue(withIdentifier: "goToDetail", sender: nil)
+    }
 
     /*
     // Override to support conditional editing of the table view.
@@ -90,14 +93,18 @@ class NotificationViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        if let vc = segue.destination as? NotificationDetailViewController {
+            guard let row = self.tableView.indexPathForSelectedRow?.row else {
+                return
+            }
+            vc.data = notificationData[row]
+        }
     }
-    */
+    
 
 }

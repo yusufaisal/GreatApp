@@ -10,6 +10,7 @@
 		AE02F8902445BB5F000BB728 /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE02F88F2445BB5F000BB728 /* NotificationViewController.swift */; };
 		AE02F8922445E15A000BB728 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE02F8912445E15A000BB728 /* Service.swift */; };
 		AE02F8952445E81B000BB728 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE02F8942445E81B000BB728 /* Notifications.swift */; };
+		AE02F8972446453D000BB728 /* NotificationDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE02F8962446453D000BB728 /* NotificationDetailViewController.swift */; };
 		AE05B7942445864D009B42D0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE05B7932445864D009B42D0 /* AppDelegate.swift */; };
 		AE05B7962445864D009B42D0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE05B7952445864D009B42D0 /* SceneDelegate.swift */; };
 		AE05B7982445864D009B42D0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE05B7972445864D009B42D0 /* ViewController.swift */; };
@@ -51,6 +52,7 @@
 		AE02F88F2445BB5F000BB728 /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
 		AE02F8912445E15A000BB728 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		AE02F8942445E81B000BB728 /* Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
+		AE02F8962446453D000BB728 /* NotificationDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationDetailViewController.swift; sourceTree = "<group>"; };
 		AE05B7902445864D009B42D0 /* GreatApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GreatApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE05B7932445864D009B42D0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AE05B7952445864D009B42D0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -192,6 +194,7 @@
 			isa = PBXGroup;
 			children = (
 				AE02F88F2445BB5F000BB728 /* NotificationViewController.swift */,
+				AE02F8962446453D000BB728 /* NotificationDetailViewController.swift */,
 				AE15ACFA24459CC2008E3EC5 /* DetailViewController.swift */,
 				AE06A37824459582005F4340 /* SettingTableViewController.swift */,
 				AE05B7972445864D009B42D0 /* ViewController.swift */,
@@ -357,6 +360,7 @@
 				AE02F8952445E81B000BB728 /* Notifications.swift in Sources */,
 				AE06A37924459582005F4340 /* SettingTableViewController.swift in Sources */,
 				AE06A369244591F6005F4340 /* Constants.swift in Sources */,
+				AE02F8972446453D000BB728 /* NotificationDetailViewController.swift in Sources */,
 				AE02F8902445BB5F000BB728 /* NotificationViewController.swift in Sources */,
 				AE05B7982445864D009B42D0 /* ViewController.swift in Sources */,
 				AE05B79E2445864D009B42D0 /* GreatApp.xcdatamodeld in Sources */,

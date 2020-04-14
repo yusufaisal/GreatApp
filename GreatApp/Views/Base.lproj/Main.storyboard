@@ -263,10 +263,99 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Notification Center" id="14R-S7-2Ie"/>
+                    <connections>
+                        <segue destination="hMG-b9-Xah" kind="show" identifier="goToDetail" id="nJu-Ea-I5o"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fAM-m7-KeA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1879.7101449275365" y="853.79464285714278"/>
+        </scene>
+        <!--Notification Detail View Controller-->
+        <scene sceneID="YFz-U0-uck">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LzQ-pf-sd3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewController id="hMG-b9-Xah" customClass="NotificationDetailViewController" customModule="GreatApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rxm-1X-xdY">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="PgF-98-1bo">
+                                <rect key="frame" x="25" y="81" width="364" height="54"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wand.and.stars" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="UJb-gm-fUM">
+                                        <rect key="frame" x="0.0" y="0.5" width="54" height="53"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="54" id="GwC-95-Hdy"/>
+                                            <constraint firstAttribute="height" constant="54" id="MCq-jF-dt3"/>
+                                        </constraints>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="itL-u8-xcD">
+                                        <rect key="frame" x="69" y="0.0" width="295" height="54"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Title Gan" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="00Z-ot-m2X">
+                                                <rect key="frame" x="0.0" y="0.0" width="68.5" height="34.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Authored by iSal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OWy-ZB-k1D">
+                                                <rect key="frame" x="0.0" y="39.5" width="93" height="14.5"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
+                                                <color key="textColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kxF-sG-K1d">
+                                <rect key="frame" x="25" y="150" width="364" height="284.5"/>
+                                <mutableString key="text">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7ib-te-WJp">
+                                <rect key="frame" x="25" y="743" width="364" height="40"/>
+                                <color key="backgroundColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="ZrV-0b-v4f"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                <state key="normal" title="Additional Action">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="kxF-sG-K1d" firstAttribute="top" secondItem="PgF-98-1bo" secondAttribute="bottom" constant="15" id="7RB-cw-XVG"/>
+                            <constraint firstItem="fVN-30-5gZ" firstAttribute="trailing" secondItem="PgF-98-1bo" secondAttribute="trailing" constant="25" id="8Za-vl-zT8"/>
+                            <constraint firstItem="fVN-30-5gZ" firstAttribute="bottom" secondItem="7ib-te-WJp" secondAttribute="bottom" constant="25" id="Bvl-Jk-DjY"/>
+                            <constraint firstAttribute="trailing" secondItem="kxF-sG-K1d" secondAttribute="trailing" constant="25" id="Qmf-I8-JSv"/>
+                            <constraint firstItem="7ib-te-WJp" firstAttribute="leading" secondItem="fVN-30-5gZ" secondAttribute="leading" constant="25" id="VKS-5i-HuA"/>
+                            <constraint firstItem="kxF-sG-K1d" firstAttribute="leading" secondItem="fVN-30-5gZ" secondAttribute="leading" constant="25" id="ZrY-RB-0y2"/>
+                            <constraint firstItem="PgF-98-1bo" firstAttribute="top" secondItem="fVN-30-5gZ" secondAttribute="top" constant="25" id="cbL-9X-VQp"/>
+                            <constraint firstItem="PgF-98-1bo" firstAttribute="leading" secondItem="fVN-30-5gZ" secondAttribute="leading" constant="25" id="dLP-Ah-raw"/>
+                            <constraint firstItem="fVN-30-5gZ" firstAttribute="trailing" secondItem="7ib-te-WJp" secondAttribute="trailing" constant="25" id="ezV-e0-sOX"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="fVN-30-5gZ"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="ru7-Ef-95l"/>
+                    <connections>
+                        <outlet property="imageView" destination="UJb-gm-fUM" id="sBT-FW-Yy7"/>
+                        <outlet property="messageLabel" destination="kxF-sG-K1d" id="ZTr-a3-Suf"/>
+                        <outlet property="titleLabel" destination="00Z-ot-m2X" id="GHu-sg-LSd"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="2709" y="853"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="O0o-aY-Gon">
@@ -293,6 +382,7 @@
         <image name="bell" catalog="system" width="128" height="124"/>
         <image name="envelope.fill" catalog="system" width="128" height="93"/>
         <image name="person.circle" catalog="system" width="128" height="121"/>
+        <image name="wand.and.stars" catalog="system" width="128" height="113"/>
         <image name="xmark.circle" catalog="system" width="128" height="121"/>
     </resources>
 </document>
