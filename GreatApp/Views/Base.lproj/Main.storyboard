@@ -116,7 +116,7 @@
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="129.91071428571428"/>
         </scene>
-        <!--Settings-->
+        <!--Personalization-->
         <scene sceneID="pkO-qk-xPF">
             <objects>
                 <tableViewController id="y1A-6b-NSS" customClass="SettingTableViewController" customModule="GreatApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -161,7 +161,7 @@
                             <outlet property="delegate" destination="y1A-6b-NSS" id="AY5-bE-I3x"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Settings" id="5oO-wX-XJz"/>
+                    <navigationItem key="navigationItem" title="Personalization" id="5oO-wX-XJz"/>
                     <connections>
                         <outlet property="fullName" destination="2Xd-sS-5fl" id="4ju-Fu-yUV"/>
                     </connections>
